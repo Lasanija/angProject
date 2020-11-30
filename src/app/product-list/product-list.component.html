@@ -1,0 +1,9 @@
+<div class="container" >
+  <div class="check-btn">
+    <button class="btn btn-outline-secondary"  (click)="ChangeView('list')"> List</button>
+    <button  class="btn btn-outline-secondary" (click)="ChangeView('grid')"> Grid</button></div>
+
+<div [ngClass]="viewType">
+<app-product-item *ngFor="let product of productList" [inputProduct]="product" ></app-product-item>
+</div>
+</div>
